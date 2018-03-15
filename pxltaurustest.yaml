@@ -1,0 +1,55 @@
+---
+execution:
+  scenario: pxltaurustest
+  concurrency: 20
+  ramp-up: 1m
+  hold-for: 5m
+scenarios:
+  pxltaurustest:
+    headers:
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36'
+      Accept-Encoding: 'gzip, deflate'
+      Accept-Language: 'nl-NL,nl;q=0.9,en-US;q=0.8,en;q=0.7'
+    requests:
+      - url: 'http://www.pxl.be/'
+        method: GET
+        label: 'http://www.pxl.be/'
+        think-time: 0ms
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+      - url: 'http://www.pxl.be/Opleidingen.html'
+        method: GET
+        label: 'http://www.pxl.be/Opleidingen.html'
+        think-time: 8787ms
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Referer: 'http://www.pxl.be/'
+      - url: 'http://www.pxl.be/Pub/PXL-Framework/Translations/ELBA/ELBA-Applications/PXL_OpleidingsFilter.html'
+        method: GET
+        label: 'http://www.pxl.be/Pub/PXL-Framework/Translations/ELBA/ELBA-Applications/PXL_OpleidingsFilter.html'
+        headers:
+          Accept: 'text/html, */*; q=0.01'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.pxl.be/Opleidingen.html'
+        body:
+          filter: ''
+      - url: 'http://www.pxl.be/ergotherapie'
+        method: GET
+        label: 'http://www.pxl.be/ergotherapie'
+        think-time: 12340ms
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Referer: 'http://www.pxl.be/Opleidingen.html'
+      - url: 'http://www.pxl.be/smartsite.net'
+        method: GET
+        label: 'http://www.pxl.be/smartsite.net'
+        think-time: 18576ms
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Referer: 'http://www.pxl.be/ergotherapie'
+        body:
+          id: '208'
