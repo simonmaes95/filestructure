@@ -14,7 +14,7 @@ reporting:
   test-duration: true  # provides test duration
   dump-csv: /home/ubuntu/results/lifecharger.csv
 - module: final-stats
-  dump-xml: stats.xml
+  dump-xml: /home/ubuntu/results/stats.xml
 scenarios:
   lifechargertest:
     headers:
