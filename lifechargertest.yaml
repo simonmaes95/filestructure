@@ -12,9 +12,9 @@ reporting:
   percentiles: true  # display average times and percentiles
   failed-labels: true  # provides list of sample labels with failures
   test-duration: true  # provides test duration
-  dump-csv: /home/ubuntu/ssh/results/lifecharger.csv
+  dump-csv: /tmp/artifacts/lifecharger.csv
 - module: final-stats
-  dump-xml: /home/ubuntu/ssh/results/stats.xml
+  dump-xml: /tmp/artifacts/stats.xml
 scenarios:
   lifechargertest:
     headers:
