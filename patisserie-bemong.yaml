@@ -12,6 +12,8 @@ reporting:
   failed-labels: true  # provides list of sample labels with failures
   test-duration: true  # provides test duration
   dump-csv: /home/ubuntu/results/patisserie-bemong.csv
+- module: final-stats
+  dump-xml: /home/ubuntu/results/stats.xml
 scenarios:
   patisserie-bemong:
     headers:

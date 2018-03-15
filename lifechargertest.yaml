@@ -13,6 +13,8 @@ reporting:
   failed-labels: true  # provides list of sample labels with failures
   test-duration: true  # provides test duration
   dump-csv: /home/ubuntu/results/lifecharger.csv
+- module: final-stats
+  dump-xml: stats.xml
 scenarios:
   lifechargertest:
     headers:
