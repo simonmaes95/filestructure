@@ -1,5 +1,6 @@
 ---
 execution:
+  executor: gatling
   scenario: comparison
   concurrency: 30
   ramp-up: 1m
