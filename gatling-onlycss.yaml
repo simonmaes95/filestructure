@@ -1,0 +1,345 @@
+---
+execution:
+  executor: gatling
+  scenario: gatling-onlycss
+  concurrency: 10
+  ramp-up: 1m
+  hold-for: 1m
+scenarios:
+  gatling-onlycss:
+    headers:
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36'
+      Accept-Language: 'nl-NL,nl;q=0.9,en-US;q=0.8,en;q=0.7'
+    requests:
+      - url: 'http://www.pxl.be/'
+        method: GET
+        label: 'http://www.pxl.be/'
+        think-time: 0ms
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Accept-Encoding: 'gzip, deflate'
+      - url: 'http://www.pxl.be/css/myfontswebfontskit.css'
+        method: GET
+        label: 'http://www.pxl.be/css/myfontswebfontskit.css'
+        headers:
+          Accept: 'text/css,*/*;q=0.1'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate'
+      - url: 'http://www.pxl.be/css/style.css'
+        method: GET
+        label: 'http://www.pxl.be/css/style.css'
+        headers:
+          Accept: 'text/css,*/*;q=0.1'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate'
+      - url: 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css'
+        method: GET
+        label: 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css'
+        headers:
+          Accept: 'text/css,*/*;q=0.1'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate, br'
+      - url: 'http://www.pxl.be/Pub/PXL-Framework/ELBA-CSS/PXL_Customcss.css'
+        method: GET
+        label: 'http://www.pxl.be/Pub/PXL-Framework/ELBA-CSS/PXL_Customcss.css'
+        headers:
+          Accept: 'text/css,*/*;q=0.1'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate'
+      - url: 'https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.2/flickity.min.css'
+        method: GET
+        label: 'https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.2/flickity.min.css'
+        headers:
+          Accept: 'text/css,*/*;q=0.1'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate, br'
+      - url: 'http://www.pxl.be/webfonts/neue-helvetica-bold-extended.woff2'
+        method: GET
+        label: 'http://www.pxl.be/webfonts/neue-helvetica-bold-extended.woff2'
+        headers:
+          Origin: 'http://www.pxl.be'
+          Accept: '*/*'
+          Referer: 'http://www.pxl.be/css/myfontswebfontskit.css'
+          Accept-Encoding: 'gzip, deflate'
+      - url: 'https://platform.twitter.com/widgets/widget_iframe.f47a2e0b4471326b6fa0f163bda46011.html'
+        method: GET
+        label: 'https://platform.twitter.com/widgets/widget_iframe.f47a2e0b4471326b6fa0f163bda46011.html'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate, br'
+        body:
+          origin: 'http://www.pxl.be'
+      - url: 'https://apis.google.com/u/0/se/0/_/+1/fastbutton'
+        method: GET
+        label: 'https://apis.google.com/u/0/se/0/_/+1/fastbutton'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          X-Client-Data: CJK2yQEIpbbJAQjBtskBCKmdygEIqKPKAQ==
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate, br'
+        body:
+          usegapi: '1'
+          size: medium
+          origin: 'http://www.pxl.be'
+          url: 'http://www.pxl.be/'
+          gsrc: 3p
+          ic: '1'
+          jsh: 'm;/_/scs/apps-static/_/js/k=oz.gapi.nl.p-ffq0TBTDk.O/m=__features__/am=AQE/rt=j/d=1/rs=AGLTcCMbOTndxlIk03Ws_yQUc14CcWd1vQ#_methods=onPlusOne,_ready,_close,_open,_resizeMe,_renderstart,oncircled,drefresh,erefresh'
+          id: I0_1521534325032
+          _gfid: I0_1521534325032
+          parent: 'http://www.pxl.be'
+          pfname: ''
+          rpctoken: '23588862'
+      - url: 'https://platform.twitter.com/widgets/tweet_button.f47a2e0b4471326b6fa0f163bda46011.en.html#dnt=false&id=twitter-widget-0&lang=en&original_referer=http%3A%2F%2Fwww.pxl.be%2F&size=m&text=Hogeschool%20PXL&time=1521534325126&type=share&url=http%3A%2F%2Fwww.pxl.be%2F'
+        method: GET
+        label: 'https://platform.twitter.com/widgets/tweet_button.f47a2e0b4471326b6fa0f163bda46011.en.html#dnt=false&id=twitter-widget-0&lang=en&original_referer=http%3A%2F%2Fwww.pxl.be%2F&size=m&text=Hogeschool%20PXL&time=1521534325126&type=share&url=http%3A%2F%2Fwww.pxl.be%2F'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate, br'
+      - url: 'https://accounts.google.com/o/oauth2/postmessageRelay'
+        method: GET
+        label: 'https://accounts.google.com/o/oauth2/postmessageRelay'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          X-Client-Data: CJK2yQEIpbbJAQjBtskBCKmdygEIqKPKAQ==
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate, br'
+        body:
+          parent: 'http://www.pxl.be'
+          jsh: 'm;/_/scs/apps-static/_/js/k=oz.gapi.nl.p-ffq0TBTDk.O/m=__features__/am=AQE/rt=j/d=1/rs=AGLTcCMbOTndxlIk03Ws_yQUc14CcWd1vQ#rpctoken=224702806'
+          forcesecure: '1'
+      - url: 'https://syndication.twitter.com/settings'
+        method: GET
+        label: 'https://syndication.twitter.com/settings'
+        headers:
+          Origin: 'https://platform.twitter.com'
+          Accept: '*/*'
+          Referer: 'https://platform.twitter.com/widgets/widget_iframe.f47a2e0b4471326b6fa0f163bda46011.html?origin=http%3A%2F%2Fwww.pxl.be'
+          Accept-Encoding: 'gzip, deflate, br'
+      - url: 'http://staticxx.facebook.com/connect/xd_arbiter/r/Ms1VZf1Vg1J.js'
+        method: GET
+        label: 'http://staticxx.facebook.com/connect/xd_arbiter/r/Ms1VZf1Vg1J.js'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate'
+        body:
+          version: '42#channel=f1a610f7887314'
+          origin: 'http://www.pxl.be'
+      - url: 'https://staticxx.facebook.com/connect/xd_arbiter/r/Ms1VZf1Vg1J.js'
+        method: GET
+        label: 'https://staticxx.facebook.com/connect/xd_arbiter/r/Ms1VZf1Vg1J.js'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate, br'
+        body:
+          version: '42#channel=f1a610f7887314'
+          origin: 'http://www.pxl.be'
+      - url: 'https://syndication.twitter.com/i/jot'
+        method: POST
+        label: 'https://syndication.twitter.com/i/jot'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Origin: 'null'
+          Content-Type: application/x-www-form-urlencoded
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Accept-Encoding: 'gzip, deflate, br'
+        body:
+          dnt: '0'
+          l: '{"widget_origin":"http://www.pxl.be/","widget_frame":false,"language":"en","message":"m:nocount:","_category_":"tfw_client_event","triggered_on":1521534325524,"dnt":false,"client_version":"c419f42:1520970215484","format_version":1,"event_namespace":{"client":"tfw","page":"button","section":"share","action":"impression"}},{"widget_origin":"http://www.pxl.be/","widget_frame":null,"duration_ms":448.79999989643693,"_category_":"tfw_client_event","triggered_on":1521534325524,"dnt":false,"client_version":"c419f42:1520970215484","format_version":1,"event_namespace":{"client":"tfw","action":"render","page":"page","component":"performance"}}'
+          tfw_redirect: 'https://platform.twitter.com/jot.html'
+      - url: 'https://platform.twitter.com/jot.html'
+        method: GET
+        label: 'https://platform.twitter.com/jot.html'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Accept-Encoding: 'gzip, deflate, br'
+      - url: 'https://www.facebook.com/plugins/like_box.php'
+        method: GET
+        label: 'https://www.facebook.com/plugins/like_box.php'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate, br'
+        body:
+          app_id: ''
+          channel: 'http://staticxx.facebook.com/connect/xd_arbiter/r/Ms1VZf1Vg1J.js?version=42#cb=f39cc4a58eacba4&domain=www.pxl.be&origin=http%3A%2F%2Fwww.pxl.be%2Ff1a610f7887314&relation=parent.parent'
+          color_scheme: light
+          container_width: '0'
+          header: 'false'
+          height: '350'
+          href: 'https://www.facebook.com/HogeschoolPXL'
+          locale: en_US
+          sdk: joey
+          show_border: 'false'
+          show_faces: 'true'
+          stream: 'false'
+          width: '338'
+      - url: 'https://www.facebook.com/plugins/like_box.php'
+        method: GET
+        label: 'https://www.facebook.com/plugins/like_box.php'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate, br'
+        body:
+          app_id: ''
+          channel: 'http://staticxx.facebook.com/connect/xd_arbiter/r/Ms1VZf1Vg1J.js?version=42#cb=f1b61ff4f609384&domain=www.pxl.be&origin=http%3A%2F%2Fwww.pxl.be%2Ff1a610f7887314&relation=parent.parent'
+          color_scheme: light
+          container_width: '0'
+          header: 'false'
+          height: '350'
+          href: 'https://www.facebook.com/HogeschoolPXL'
+          locale: en_US
+          sdk: joey
+          show_border: 'false'
+          show_faces: 'true'
+          stream: 'false'
+          width: '285'
+      - url: 'https://www.facebook.com/plugins/like.php'
+        method: GET
+        label: 'https://www.facebook.com/plugins/like.php'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate, br'
+        body:
+          app_id: ''
+          channel: 'http://staticxx.facebook.com/connect/xd_arbiter/r/Ms1VZf1Vg1J.js?version=42#cb=f3d0fe2c6ccd804&domain=www.pxl.be&origin=http%3A%2F%2Fwww.pxl.be%2Ff1a610f7887314&relation=parent.parent'
+          container_width: '100'
+          href: 'http://www.pxl.be/'
+          layout: button_count
+          locale: en_US
+          sdk: joey
+          send: 'false'
+          show_faces: 'false'
+          width: '100'
+      - url: 'https://www.facebook.com/plugins/share_button.php'
+        method: GET
+        label: 'https://www.facebook.com/plugins/share_button.php'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+          Referer: 'http://www.pxl.be/'
+          Accept-Encoding: 'gzip, deflate, br'
+        body:
+          app_id: ''
+          channel: 'http://staticxx.facebook.com/connect/xd_arbiter/r/Ms1VZf1Vg1J.js?version=42#cb=f34c9105e806fc&domain=www.pxl.be&origin=http%3A%2F%2Fwww.pxl.be%2Ff1a610f7887314&relation=parent.parent'
+          container_width: '100'
+          href: 'http://www.pxl.be/'
+          locale: en_US
+          sdk: joey
+          type: button
+          width: '100'
+      - url: 'https://static.xx.fbcdn.net/rsrc.php/v3ijLc4/yi/l/en_US/EHtsxzf7vfi.js'
+        method: GET
+        label: 'https://static.xx.fbcdn.net/rsrc.php/v3ijLc4/yi/l/en_US/EHtsxzf7vfi.js'
+        headers:
+          Origin: 'https://www.facebook.com'
+          Accept: '*/*'
+          Referer: 'https://www.facebook.com/'
+          Accept-Encoding: 'gzip, deflate, br'
+      - url: 'https://static.xx.fbcdn.net/rsrc.php/v3/yo/l/0,cross/9BQdvlfZNzU.css'
+        method: GET
+        label: 'https://static.xx.fbcdn.net/rsrc.php/v3/yo/l/0,cross/9BQdvlfZNzU.css'
+        headers:
+          Origin: 'https://www.facebook.com'
+          Accept: 'text/css,*/*;q=0.1'
+          Referer: 'https://www.facebook.com/'
+          Accept-Encoding: 'gzip, deflate, br'
+      - url: 'https://static.xx.fbcdn.net/rsrc.php/v3/yI/l/0,cross/0Xlu5eqfuG_.css'
+        method: GET
+        label: 'https://static.xx.fbcdn.net/rsrc.php/v3/yI/l/0,cross/0Xlu5eqfuG_.css'
+        headers:
+          Origin: 'https://www.facebook.com'
+          Accept: 'text/css,*/*;q=0.1'
+          Referer: 'https://www.facebook.com/'
+          Accept-Encoding: 'gzip, deflate, br'
+      - url: 'https://static.xx.fbcdn.net/rsrc.php/v3/yJ/l/0,cross/26V-iCD0O0M.css'
+        method: GET
+        label: 'https://static.xx.fbcdn.net/rsrc.php/v3/yJ/l/0,cross/26V-iCD0O0M.css'
+        headers:
+          Origin: 'https://www.facebook.com'
+          Accept: 'text/css,*/*;q=0.1'
+          Referer: 'https://www.facebook.com/'
+          Accept-Encoding: 'gzip, deflate, br'
+      - url: 'https://static.xx.fbcdn.net/rsrc.php/v3/yo/l/0,cross/9BQdvlfZNzU.css'
+        method: GET
+        label: 'https://static.xx.fbcdn.net/rsrc.php/v3/yo/l/0,cross/9BQdvlfZNzU.css'
+        headers:
+          Origin: 'https://www.facebook.com'
+          Accept: 'text/css,*/*;q=0.1'
+          Referer: 'https://www.facebook.com/'
+          Accept-Encoding: 'gzip, deflate, br'
+      - url: 'https://static.xx.fbcdn.net/rsrc.php/v3/yI/l/0,cross/0Xlu5eqfuG_.css'
+        method: GET
+        label: 'https://static.xx.fbcdn.net/rsrc.php/v3/yI/l/0,cross/0Xlu5eqfuG_.css'
+        headers:
+          Origin: 'https://www.facebook.com'
+          Accept: 'text/css,*/*;q=0.1'
+          Referer: 'https://www.facebook.com/'
+          Accept-Encoding: 'gzip, deflate, br'
+      - url: 'https://static.xx.fbcdn.net/rsrc.php/v3/yJ/l/0,cross/26V-iCD0O0M.css'
+        method: GET
+        label: 'https://static.xx.fbcdn.net/rsrc.php/v3/yJ/l/0,cross/26V-iCD0O0M.css'
+        headers:
+          Origin: 'https://www.facebook.com'
+          Accept: 'text/css,*/*;q=0.1'
+          Referer: 'https://www.facebook.com/'
+          Accept-Encoding: 'gzip, deflate, br'
+      - url: 'https://www.facebook.com/pages/call_to_action/fetch_dialog_data/?id=791899907559261&surface=pagePlugin&unit_type=VIEWER&dpr=1'
+        method: POST
+        label: 'https://www.facebook.com/pages/call_to_action/fetch_dialog_data/?id=791899907559261&surface=pagePlugin&unit_type=VIEWER&dpr=1'
+        headers:
+          Origin: 'https://www.facebook.com'
+          Content-Type: application/x-www-form-urlencoded
+          Accept: '*/*'
+          Referer: 'https://www.facebook.com/plugins/like_box.php?app_id=&channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FMs1VZf1Vg1J.js%3Fversion%3D42%23cb%3Df1b61ff4f609384%26domain%3Dwww.pxl.be%26origin%3Dhttp%253A%252F%252Fwww.pxl.be%252Ff1a610f7887314%26relation%3Dparent.parent&color_scheme=light&container_width=0&header=false&height=350&href=https%3A%2F%2Fwww.facebook.com%2FHogeschoolPXL&locale=en_US&sdk=joey&show_border=false&show_faces=true&stream=false&width=285'
+          Accept-Encoding: 'gzip, deflate, br'
+        body:
+          __a: '1'
+          __be: '1'
+          __dyn: 7xe6E5q5U5Obx679p60DU98nwgU5GexebzEeUaUuwmE4i3K3q17w9O12x61cwLCwoo1upHwiE3awEw96789U2NwKxe585u
+          __pc: 'PHASED:plugin_default_pkg'
+          __req: '1'
+          __rev: '3737142'
+          __sp: '1'
+          __user: '1657590868'
+          fb_dtsg: 'AQG0v3btw7VA:AQG9dtnSSo6V'
+          jazoest: '2658171481185198116119558665586581715710011611083831115486'
+          locale: en_US
+      - url: 'https://www.facebook.com/pages/call_to_action/fetch_dialog_data/?id=791899907559261&surface=pagePlugin&unit_type=VIEWER&dpr=1'
+        method: POST
+        label: 'https://www.facebook.com/pages/call_to_action/fetch_dialog_data/?id=791899907559261&surface=pagePlugin&unit_type=VIEWER&dpr=1'
+        headers:
+          Origin: 'https://www.facebook.com'
+          Content-Type: application/x-www-form-urlencoded
+          Accept: '*/*'
+          Referer: 'https://www.facebook.com/plugins/like_box.php?app_id=&channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FMs1VZf1Vg1J.js%3Fversion%3D42%23cb%3Df39cc4a58eacba4%26domain%3Dwww.pxl.be%26origin%3Dhttp%253A%252F%252Fwww.pxl.be%252Ff1a610f7887314%26relation%3Dparent.parent&color_scheme=light&container_width=0&header=false&height=350&href=https%3A%2F%2Fwww.facebook.com%2FHogeschoolPXL&locale=en_US&sdk=joey&show_border=false&show_faces=true&stream=false&width=338'
+          Accept-Encoding: 'gzip, deflate, br'
+        body:
+          __a: '1'
+          __be: '1'
+          __dyn: 7xe6E5q5U5Obx679p60DU98nwgU5GexebzEeUaUuwmE4i3K3q17w9O12x61cwLCwoo1upHwiE3awEw96789U2NwKxe585u
+          __pc: 'PHASED:plugin_default_pkg'
+          __req: '1'
+          __rev: '3737142'
+          __sp: '1'
+          __user: '1657590868'
+          fb_dtsg: 'AQHfFEfSvcTE:AQEu9UsTbpef'
+          jazoest: '26581721027069102831189984695865816911757851158498112101102'
+          locale: en_US
