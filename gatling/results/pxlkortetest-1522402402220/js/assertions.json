@@ -1,0 +1,10 @@
+{
+  "simulation": "pxlKorteTest",
+  "simulationId": "pxlkortetest",
+  "start": 1522402402220,
+  "description": "",
+  "scenarios": ["pxlKorteTest"],
+  "assertions": [
+
+  ]
+}
